@@ -1,0 +1,27 @@
+echo "# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+myenv/
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+
+# Data (exclude large files)
+*.csv
+data/
+models/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db" > .gitignore 

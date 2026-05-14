@@ -1,0 +1,47 @@
+# Virtual environments
+venv/
+myenv/
+env/
+.env
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Data
+data/
+*.csv
+*.json
+
+# Logs
+*.log
+
+# Frontend (since we're only dockerizing the API)
+frontend/
+
+# Documentation
+README.md
+*.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# MLflow local artifacts
+mlruns/
+artifacts/
+
+# Jupyter notebooks
+*.ipynb
+.ipynb_checkpoints/

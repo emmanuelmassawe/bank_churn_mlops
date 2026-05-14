@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: churn-api
+    ports:
+      - "8000:8000"
+    environment:
+      - MLFLOW_TRACKING_URI=https://dagshub.com/emmanuelmassawe200/bank_churn_mlops.mlflow
+      - MLFLOW_TRACKING_USERNAME=emmanuelmassawe200
+      - MLFLOW_TRACKING_PASSWORD=2d1de8dba7efe82cbd12b1887e8ec78e2172fbaa
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

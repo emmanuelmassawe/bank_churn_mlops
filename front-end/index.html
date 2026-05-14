@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏦 AI-Powered Bank Churn Predictor</title>
+    
+    <!-- External Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-icon">💰</div>
+        <div class="floating-icon">📊</div>
+        <div class="floating-icon">🏦</div>
+        <div class="floating-icon">💳</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏦 AI Churn Predictor</h1>
+                <p class="subtitle">Advanced Machine Learning for Customer Retention</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Powered</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>84% Accuracy</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightning-bolt"></i>
+                        <span>Real-time Prediction</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-check"></i> Customer Information
+                </h2>
+
+                <form id="churnForm">
+                    <div class="form-grid">
+                        <!-- Credit Score -->
+                        <div class="form-group">
+                            <label for="creditScore">
+                                <i class="fas fa-star"></i> Credit Score
+                            </label>
+                            <input type="number" id="creditScore" required min="300" max="850" value="650" placeholder="300-850">
+                        </div>
+
+                        <!-- Geography -->
+                        <div class="form-group">
+                            <label for="geography">
+                                <i class="fas fa-globe"></i> Geography
+                            </label>
+                            <select id="geography" required>
+                                <option value="">Select Country</option>
+                                <option value="France">🇫🇷 France</option>
+                                <option value="Germany">🇩🇪 Germany</option>
+                                <option value="Spain">🇪🇸 Spain</option>
+                            </select>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="form-group">
+                            <label for="gender">
+                                <i class="fas fa-user"></i> Gender
+                            </label>
+                            <select id="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="Male">👨 Male</option>
+                                <option value="Female">👩 Female</option>
+                            </select>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="form-group">
+                            <label for="age">
+                                <i class="fas fa-calendar"></i> Age
+                            </label>
+                            <input type="number" id="age" required min="18" max="100" value="35" placeholder="18-100">
+                        </div>
+
+                        <!-- Tenure -->
+                        <div class="form-group">
+                            <label for="tenure">
+                                <i class="fas fa-clock"></i> Tenure (Years)
+                            </label>
+                            <input type="number" id="tenure" required min="0" max="20" value="5" placeholder="0-20">
+                        </div>
+
+                        <!-- Balance -->
+                        <div class="form-group">
+                            <label for="balance">
+                                <i class="fas fa-piggy-bank"></i> Account Balance
+                            </label>
+                            <input type="number" id="balance" required min="0" value="100000" placeholder="Account balance">
+                        </div>
+
+                        <!-- Number of Products -->
+                        <div class="form-group">
+                            <label for="numProducts">
+                                <i class="fas fa-shopping-cart"></i> Products Count
+                            </label>
+                            <select id="numProducts" required>
+                                <option value="">Select</option>
+                                <option value="1">1 Product</option>
+                                <option value="2">2 Products</option>
+                                <option value="3">3 Products</option>
+                                <option value="4">4 Products</option>
+                            </select>
+                        </div>
+
+                        <!-- Credit Card -->
+                        <div class="form-group">
+                            <label for="hasCrCard">
+                                <i class="fas fa-credit-card"></i> Credit Card
+                            </label>
+                            <select id="hasCrCard" required>
+                                <option value="">Select</option>
+                                <option value="1">✅ Yes</option>
+                                <option value="0">❌ No</option>
+                            </select>
+                        </div>
+
+                        <!-- Active Member -->
+                        <div class="form-group">
+                            <label for="isActiveMember">
+                                <i class="fas fa-user-check"></i> Active Member
+                            </label>
+                            <select id="isActiveMember" required>
+                                <option value="">Select</option>
+                                <option value="1">✅ Active</option>
+                                <option value="0">❌ Inactive</option>
+                            </select>
+                        </div>
+
+                        <!-- Salary -->
+                        <div class="form-group">
+                            <label for="estimatedSalary">
+                                <i class="fas fa-money-bill-wave"></i> Estimated Salary
+                            </label>
+                            <input type="number" id="estimatedSalary" required min="0" value="100000" placeholder="Annual salary">
+                        </div>
+
+                        <!-- Satisfaction Score -->
+                        <div class="form-group">
+                            <label for="satisfactionScore">
+                                <i class="fas fa-smile"></i> Satisfaction Score
+                            </label>
+                            <select id="satisfactionScore" required>
+                                <option value="">Select Score</option>
+                                <option value="1">⭐ 1 - Very Poor</option>
+                                <option value="2">⭐⭐ 2 - Poor</option>
+                                <option value="3">⭐⭐⭐ 3 - Average</option>
+                                <option value="4">⭐⭐⭐⭐ 4 - Good</option>
+                                <option value="5">⭐⭐⭐⭐⭐ 5 - Excellent</option>
+                            </select>
+                        </div>
+
+                        <!-- Card Type -->
+                        <div class="form-group">
+                            <label for="cardType">
+                                <i class="fas fa-gem"></i> Card Type
+                            </label>
+                            <select id="cardType" required>
+                                <option value="">Select Card</option>
+                                <option value="SILVER">🥈 Silver</option>
+                                <option value="GOLD">🥇 Gold</option>
+                                <option value="PLATINUM">💎 Platinum</option>
+                                <option value="DIAMOND">💍 Diamond</option>
+                            </select>
+                        </div>
+
+                        <!-- Points Earned -->
+                        <div class="form-group">
+                            <label for="pointEarned">
+                                <i class="fas fa-trophy"></i> Points Earned
+                            </label>
+                            <input type="number" id="pointEarned" required min="0" value="500" placeholder="Reward points">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="predict-btn" id="predictBtn">
+                        <i class="fas fa-brain"></i> Analyze Customer Risk
+                    </button>
+                </form>
+
+                <!-- Loading Animation -->
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>🧠 AI is analyzing customer behavior...</p>
+                </div>
+
+                <!-- Results -->
+                <div id="result" class="result">
+                    <div id="resultContent"></div>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Model Accuracy</h3>
+                    <p>Our Random Forest model achieves <strong>84% accuracy</strong> on customer churn prediction using advanced feature engineering.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Data Security</h3>
+                    <p>All customer data is processed securely and never stored. Predictions are generated in real-time.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Business Impact</h3>
+                    <p>Identify at-risk customers early and implement targeted retention strategies to reduce churn.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Powered By</h3>
+                    <p><strong>MLflow</strong> for model management, <strong>FastAPI</strong> for serving, and <strong>DagsHub</strong> for MLOps.</p>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

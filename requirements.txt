@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+mlflow
+pandas
+scikit-learn
+dagshub
+numpy
+imbalanced-learn
+prefect
+psutil
+pyarrow
+scipy
