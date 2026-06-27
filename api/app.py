@@ -118,4 +118,8 @@ def predict(request: PredictionRequest):
 
 if __name__ == "__main__":
     import uvicorn
+<<<<<<< HEAD
     uvicorn.run("app:app", host="0.0.0.0", port=8001, reload=True)
+=======
+    uvicorn.run("app:app", host="0.0.0.0", port=8001, reload=True)
+>>>>>>> 08caea588714c9966720d49745040bffced850e5
