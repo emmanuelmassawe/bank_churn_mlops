@@ -1,6 +1,6 @@
 // ===== CONFIGURATION =====
 const CONFIG = {
-    API_BASE_URL: 'http://localhost:8000',
+    API_BASE_URL: 'http://localhost:8001',
     ANIMATION_DELAY: 100, // milliseconds between form group animations
     NOTIFICATION_DURATION: 4000 // milliseconds
 };

@@ -9,6 +9,14 @@ app = FastAPI(
     description = "predict if the bank will churn or not",
     version = "1.0.0" )
 
+# app.py - tumia dotenv
+from dotenv import load_dotenv
+load_dotenv()
+os.environ["MLFLOW_TRACKING_USERNAME"] = os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"] = os.getenv("MLFLOW_TRACKING_PASSWORD")
+
+mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
+
 from pydantic import BaseModel
 from typing import List 
 
@@ -34,12 +42,7 @@ class PredictionResponse(BaseModel):
     status: str
     predictions: List[dict]
 
-# ===== MLflow Settings =====
-os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/emmanuelmassawe200/bank_churn_mlops.mlflow"
-os.environ["MLFLOW_TRACKING_USERNAME"] = "emmanuelmassawe200"
-os.environ["MLFLOW_TRACKING_PASSWORD"] = "2d1de8dba7efe82cbd12b1887e8ec78e2172fbaa"
 
-mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -115,4 +118,4 @@ def predict(request: PredictionRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=8001, reload=True)
