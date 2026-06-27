@@ -1,6 +1,6 @@
 // ===== CONFIGURATION =====
 const CONFIG = {
-  API_BASE_URL: "https://bank-churn-mlops-2jk5.onrender.com/",
+  API_BASE_URL: "https://bank-churn-mlops-2jk5.onrender.com",
   ANIMATION_DELAY: 100, // milliseconds between form group animations
   NOTIFICATION_DURATION: 4000, // milliseconds
 };
