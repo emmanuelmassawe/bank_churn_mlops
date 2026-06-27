@@ -11,4 +11,3 @@ prefect
 psutil
 pyarrow
 scipy
-python
